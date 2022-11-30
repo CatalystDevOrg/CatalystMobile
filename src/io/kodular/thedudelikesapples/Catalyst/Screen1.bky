@@ -1,0 +1,253 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="s#~3J^^6AHq,XcOI{{Y|" x="10" y="10">
+    <mutation component_type="MakeroidTabLayout" is_generic="false" instance_name="Tabs" event_name="TabItemSelected"></mutation>
+    <field name="COMPONENT_SELECTOR">Tabs</field>
+    <statement name="DO">
+      <block type="component_method" id="92.}e%KyVKChrjuQTgYx">
+        <mutation component_type="WebViewer" method_name="GoToUrl" is_generic="false" instance_name="Web_Viewer1"></mutation>
+        <field name="COMPONENT_SELECTOR">Web_Viewer1</field>
+        <value name="ARG0">
+          <block type="lexical_variable_get" id="NDNtdkr|7J#QEuH,#x@6">
+            <mutation>
+              <eventparam name="tab"></eventparam>
+            </mutation>
+            <field name="VAR">tab</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="nJCal?$t6FywdS/g3!}o">
+            <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="URL_Box"></mutation>
+            <field name="COMPONENT_SELECTOR">URL_Box</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="lexical_variable_get" id="bEy6d_v{=[hHq8NQJ.4{">
+                <mutation>
+                  <eventparam name="tab"></eventparam>
+                </mutation>
+                <field name="VAR">tab</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="P9jMza6``XkI`8FR0Dw$" collapsed="true" x="10" y="170">
+    <mutation component_type="WebViewer" is_generic="false" instance_name="Web_Viewer1" event_name="OnConsoleMessage"></mutation>
+    <field name="COMPONENT_SELECTOR">Web_Viewer1</field>
+    <statement name="DO">
+      <block type="component_method" id="r}ieN,*@|,G/{G%y=2I.">
+        <mutation component_type="Notifier" method_name="LogError" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <value name="ARG0">
+          <block type="lexical_variable_get" id="l_9_wTM]=SvmkjYfLO!G">
+            <mutation>
+              <eventparam name="message"></eventparam>
+            </mutation>
+            <field name="VAR">message</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="4-OkiDw#@(8.DwA[[0Bh" x="90" y="310">
+    <mutation component_type="Button" is_generic="false" instance_name="Go_Button" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Go_Button</field>
+    <statement name="DO">
+      <block type="component_method" id="I6O:u0h8KZ^G5PF5oh5j">
+        <mutation component_type="MakeroidTabLayout" method_name="AddNewTab" is_generic="false" instance_name="Tabs"></mutation>
+        <field name="COMPONENT_SELECTOR">Tabs</field>
+        <value name="ARG0">
+          <block type="component_set_get" id="nCkcWB${=Nh7N,p~07ZQ">
+            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="URL_Box"></mutation>
+            <field name="COMPONENT_SELECTOR">URL_Box</field>
+            <field name="PROP">Text</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id="POkJyqYV[D%+,V/|1xOo">
+            <field name="TEXT"></field>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="9d6DO(ZpsS2(PS|Fw%uZ">
+            <mutation component_type="MakeroidTabLayout" set_or_get="set" property_name="SelectTab" is_generic="false" instance_name="Tabs"></mutation>
+            <field name="COMPONENT_SELECTOR">Tabs</field>
+            <field name="PROP">SelectTab</field>
+            <value name="VALUE">
+              <block type="math_subtract" id="V4RP?8zh75w,4ByBln]q">
+                <value name="A">
+                  <block type="component_method" id="RVbiPEoCPVVPz^xIdF)4">
+                    <mutation component_type="MakeroidTabLayout" method_name="CountTabs" is_generic="false" instance_name="Tabs"></mutation>
+                    <field name="COMPONENT_SELECTOR">Tabs</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="iJbNLQag9N%,hK]ivTCu">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="]=7CQ{?hS[Dj^z_ZGm{!" x="210" y="490">
+    <mutation component_type="Button" is_generic="false" instance_name="Shortcut_Button" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Shortcut_Button</field>
+    <statement name="DO">
+      <block type="component_method" id="Ht1N/%Dons#=9@}sMJVQ">
+        <mutation component_type="QuickShortcuts" method_name="CreatePinnedShortcut" is_generic="false" instance_name="QuickShortcuts1"></mutation>
+        <field name="COMPONENT_SELECTOR">QuickShortcuts1</field>
+        <value name="ARG0">
+          <block type="math_number" id="7j-jy:e/G{$iHfr%lTe^">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="component_set_get" id="yv;%f:Jg]^v`g]Y/(w(Y">
+            <mutation component_type="WebViewer" set_or_get="get" property_name="CurrentPageTitle" is_generic="false" instance_name="Web_Viewer1"></mutation>
+            <field name="COMPONENT_SELECTOR">Web_Viewer1</field>
+            <field name="PROP">CurrentPageTitle</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block type="component_set_get" id=",HE_j]D4r|o^zYy1v#+%">
+            <mutation component_type="WebViewer" set_or_get="get" property_name="CurrentPageTitle" is_generic="false" instance_name="Web_Viewer1"></mutation>
+            <field name="COMPONENT_SELECTOR">Web_Viewer1</field>
+            <field name="PROP">CurrentPageTitle</field>
+          </block>
+        </value>
+        <value name="ARG3">
+          <block type="text" id="q1$Q2|zKEaz;6yuH730L">
+            <field name="TEXT"></field>
+          </block>
+        </value>
+        <value name="ARG4">
+          <block type="text" id="}^|aC%O:7Dnb:q^so@k[">
+            <field name="TEXT">Screen1</field>
+          </block>
+        </value>
+        <value name="ARG5">
+          <block type="component_set_get" id=")J7Tu+T}_Bhwv/D]mdJ}">
+            <mutation component_type="WebViewer" set_or_get="get" property_name="CurrentUrl" is_generic="false" instance_name="Web_Viewer1"></mutation>
+            <field name="COMPONENT_SELECTOR">Web_Viewer1</field>
+            <field name="PROP">CurrentUrl</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="^}EeAS}|SH{7SDt_i:ok" x="650" y="490">
+    <mutation component_type="Button" is_generic="false" instance_name="Button1" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button1</field>
+    <statement name="DO">
+      <block type="component_set_get" id="+gi~}43qcRgap+7VW-Om">
+        <mutation component_type="MakeroidTabLayout" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Tabs"></mutation>
+        <field name="COMPONENT_SELECTOR">Tabs</field>
+        <field name="PROP">Visible</field>
+        <value name="VALUE">
+          <block type="logic_negate" id="k,oiYhw2Xjh{yJO#lBkR">
+            <value name="BOOL">
+              <block type="component_set_get" id="G96u@Mp~[dkZ%MBg`6F4">
+                <mutation component_type="MakeroidTabLayout" set_or_get="get" property_name="Visible" is_generic="false" instance_name="Tabs"></mutation>
+                <field name="COMPONENT_SELECTOR">Tabs</field>
+                <field name="PROP">Visible</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="_be=PtXOmKvg1.6@P]Hl" x="770" y="650">
+    <mutation component_type="TextBox" is_generic="false" instance_name="URL_Box" event_name="GotFocus"></mutation>
+    <field name="COMPONENT_SELECTOR">URL_Box</field>
+    <statement name="DO">
+      <block type="component_set_get" id="=VDiF;U{WQWF~asuQNxr">
+        <mutation component_type="Button" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Go_Button"></mutation>
+        <field name="COMPONENT_SELECTOR">Go_Button</field>
+        <field name="PROP">Visible</field>
+        <value name="VALUE">
+          <block type="logic_false" id="U)klRACI]E{ew*fL-^rw">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="iajx|N@q-CJMNk/Wut1z">
+            <mutation component_type="TextBox" set_or_get="set" property_name="WidthPercent" is_generic="false" instance_name="URL_Box"></mutation>
+            <field name="COMPONENT_SELECTOR">URL_Box</field>
+            <field name="PROP">WidthPercent</field>
+            <value name="VALUE">
+              <block type="math_number" id="1%b$vZM-q{A8?SuIK/.j">
+                <field name="NUM">100</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="$-Hjl%@K]/SdyO^j7l0R" x="10" y="710">
+    <mutation component_type="Form" is_generic="false" instance_name="Screen1" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">Screen1</field>
+    <statement name="DO">
+      <block type="component_method" id="e.@=n2OiG%+pz13zk.69">
+        <mutation component_type="MakeroidTabLayout" method_name="AddNewTab" is_generic="false" instance_name="Tabs"></mutation>
+        <field name="COMPONENT_SELECTOR">Tabs</field>
+        <value name="ARG0">
+          <block type="component_set_get" id="0K?;]b8P}bs0rezWJM=r">
+            <mutation component_type="WebViewer" set_or_get="get" property_name="HomeUrl" is_generic="false" instance_name="Web_Viewer1"></mutation>
+            <field name="COMPONENT_SELECTOR">Web_Viewer1</field>
+            <field name="PROP">HomeUrl</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id="?t%Tf:4u*MVNcVoV(!2R">
+            <field name="TEXT"></field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="6,v6*6^!I+S,ew;x#GY6" x="550" y="730">
+    <mutation component_type="TextBox" is_generic="false" instance_name="URL_Box" event_name="LostFocus"></mutation>
+    <field name="COMPONENT_SELECTOR">URL_Box</field>
+    <statement name="DO">
+      <block type="component_set_get" id="G16ke3nivh^wWDpF)BOI">
+        <mutation component_type="Button" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Go_Button"></mutation>
+        <field name="COMPONENT_SELECTOR">Go_Button</field>
+        <field name="PROP">Visible</field>
+        <value name="VALUE">
+          <block type="logic_false" id=":_4Uq:HSzZZfE~DPb{ja">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="Ct,^-O1iqV#^~(ch[CcM">
+            <mutation component_type="TextBox" set_or_get="set" property_name="Width" is_generic="false" instance_name="URL_Box"></mutation>
+            <field name="COMPONENT_SELECTOR">URL_Box</field>
+            <field name="PROP">Width</field>
+            <value name="VALUE">
+              <block type="math_number" id="Bx4NYYj+-!pqs{zs^SWn">
+                <field name="NUM">100</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_method" id="{aZ)z)r1~=RW/a*4LR84" x="210" y="950">
+    <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier2"></mutation>
+    <field name="COMPONENT_SELECTOR">Notifier2</field>
+    <value name="ARG0">
+      <block type="text" id="LiQwGT=5+)fGh@;19bFU">
+        <field name="TEXT">This is beta software, be aware that some features are incomplete.</field>
+      </block>
+    </value>
+  </block>
+  <yacodeblocks ya-version="242" language-version="34"></yacodeblocks>
+</xml>

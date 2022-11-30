@@ -1,0 +1,24 @@
+[{
+ "categoryString": "EXTENSION",
+ "dateBuilt": "2019-01-23T02:09:53+0530",
+ "nonVisible": "true",
+ "iconName": "http://thunkablehelp.ml/div/image/ic.png",
+ "methods": [],
+ "blockProperties": [{
+  "rw": "write-only",
+  "deprecated": "false",
+  "name": "Tittle_Color",
+  "description": "",
+  "type": "number"
+ }],
+ "helpUrl": "",
+ "type": "yt.DeepHost.Default_Browser.Default_Browser",
+ "androidMinSdk": 7,
+ "version": "1",
+ "external": "true",
+ "showOnPalette": "true",
+ "name": "Default_Browser",
+ "helpString": "<p>DeepHost - Default Browser Extension <br><br> Note : if you Make your App in Thunkable or Appibuilder then you can used in Assets - <br><br> Download - <a href = \"https://res.cloudinary.com/dluhwmiwm/raw/upload/v1548188604/MaterialIcons-Regular.ttf\" target = \"_blank\">MaterialIcons-Regular.ttf<\/a><br><br> <a href = \"https://www.youtube.com/c/DeepHost\" target = \"_blank\">Youtube Channel Link<\/a> <\/a> <br><br><\/p>",
+ "properties": [],
+ "events": []
+}]
